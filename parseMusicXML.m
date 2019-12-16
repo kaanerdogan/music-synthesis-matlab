@@ -13,13 +13,18 @@
 %
 % Columns of the notes array:
 % 1) note onset (measured in beats from the start, zero-based)
+% (Nota başlangıcı - vuruş olarak ölçülür, sıfır bazlı)
 % 2) duration (in beats)
+% (süre - tempo cinsinden)
 % 3) midi channel (always = 0)
 % 4) midi pitch (0 for rests)
 % 5) midi velocity (always = 80)
 % 6) note onset (in seconds, quarter = 100bpm or as given in score)
+%(nota başlangıcı - saniye cinsinden)
 % 7) duration (in seconds, see above)
-% 8) measure number (one-based)
+% (süre - saniye cinsinden)
+% 8) measure number (one-based)olarak
+% (ölçü numarası)
 % 9) key (an integer representing number of fifths.
 %    e.g.: key = 2 --> D major / B minor, 
 %          key = -1 --> F major / D minor) 

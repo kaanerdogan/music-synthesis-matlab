@@ -16,11 +16,12 @@ Başlangıç olarak bu sütunlar işimize yarayacak olan sütunlardır.<br/>
 
 > note.m dosyası
 
-```parse=parseMusicXML('muzik/nota.musicxml');
+```parse=parseMusicXML('muzik/nota.musicxml');```
 
 
 
 > sentez.m dosyası
+
 
 ```note;
 
@@ -49,4 +50,4 @@ sound(y, Fs)
 ```
 
 <br/>
-Şimdilik tek ses çalınıyor. For döngüsü üzerinde çalışıyorum.
+

@@ -3,8 +3,8 @@
 ![alt text](/muzik/nota.png "DDA")
 </div> <br/>
 <h2>Sentezleme İçin Gerekli Sütunlar</h2>
-Müziği sentezleyebilmek için verinin <ins>1.</ins> 2. 4. 6. ve 7. sütunlara ihtiyaç olduğunu düşünüyorum.
-<ins>1.Sütun notanın başlangıcını belirtiyor. Bu sütunun 1. değerinden itibaren aldığımız bir döngü ile bütün notaları çaldırabiliriz.</ins><br/>
+Müziği sentezleyebilmek için verinin ~~1.~~ 2. 4. 6. ve 7. sütunlara ihtiyaç olduğunu düşünüyorum.
+~~1.Sütun notanın başlangıcını belirtiyor. Bu sütunun 1. değerinden itibaren aldığımız bir döngü ile bütün notaları çaldırabiliriz.~~<br/>
 (1.Sütun gereksiz kaldı. Yanlış algoritma length(parse) fonksiyonu ile düzeltildi.)<br/>
 2.sütun tempo cinsinden süreyi belirtiyor. Notaların hızlı veya yavaş olarak çalınması gerektiği burada belirtiliyor. Harmonik olarak güzel bir müzik deneyimi yaşatmaz ancak aksatmadan da müziği çalabilmemizi sağlar.<br/>
 4.sütun notaların değerlerini gösteriyor. Ufak bir hesaplama ile bu değerlerden o notaların frekanslarını çıkartıp frekanslar üzerinde işlem yapmamız gerekiyor. <br/>

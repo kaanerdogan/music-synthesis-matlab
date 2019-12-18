@@ -1,7 +1,6 @@
 note; %note.m çağrılır. parse değişkeni burada
 
 LoP = length(parse); %parse değişkeninin uzunluğu alınır
-
 midiChannel=parse(:,3); % İlgili sütun değişkene atanır
 midiPitch=parse(:,4); % İlgili sütun değişkene atanır
 midiVelocity=parse(:,5); % İlgili sütun değişkene atanır
@@ -32,13 +31,18 @@ T=1/Fs;
 % tt = 0:T:(noteDuration);
 
 %Son olarak gerekli döngü hazırlanır.
+% for kk=0:freq(end)
+%     disp(kk);
+% end
 for i=VoNF:VoNL
     tt = 0:T:i;
     for j=VoFF:VoFL
         y=cos(2*pi*j*tt);
+        sound(y, Fs)
     end
-    sound(y, Fs)
+% disp(i)
 end
+
 % FoF=freq(1,:);
 % FoS=freq(2,:);
 % FoT=freq(3,:);
@@ -54,7 +58,7 @@ end
 % end
 % 
 % y = zeros(LoP);
-% 
+% parse2=parseMusicXML('deneme.musicxml');
 % for c = 1:LoP
 %     for r = 1:LoP
 %         y(r,c) = cos(2*pi*freq*tt);

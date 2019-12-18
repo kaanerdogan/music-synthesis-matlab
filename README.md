@@ -17,7 +17,8 @@ Başlangıç olarak bu sütunlar işimize yarayacak olan sütunlardır.<br/>
 > note.m dosyası
 
 ```parse=parseMusicXML('muzik/nota.musicxml');
-```
+
+
 
 > sentez.m dosyası
 

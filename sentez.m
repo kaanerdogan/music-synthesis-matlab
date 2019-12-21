@@ -1,6 +1,6 @@
-note; %note.m çağrılır. parse değişkeni burada
+% note; %note.m çağrılır. parse değişkeni burada
 
-LoP = length(parse); %parse değişkeninin uzunluğu alınır
+LoP = length(parse); %parse'ın uzunluğu alınır
 midiChannel=parse(:,3); % İlgili sütun değişkene atanır
 midiPitch=parse(:,4); % İlgili sütun değişkene atanır
 midiVelocity=parse(:,5); % İlgili sütun değişkene atanır
@@ -8,7 +8,7 @@ noteOnset = parse(:,6); % İlgili sütun değişkene atanır
 noteDuration = parse(:,7); % İlgili sütun değişkene atanır
 timeSigniture=parse(:,10); % İlgili sütun değişkene atanır
 
-freq=(440/32)*2.^((midiPitch-9)/12); % midi Pitch den frekans çevirme hesaplaması şarkının bütün notaların frekansları bu değişkene atanır
+% freq=(440/32)*2.^((midiPitch-9)/12); % midi Pitch den frekans çevirme hesaplaması şarkının bütün notaların frekansları bu değişkene atanır
 
 VoFF=freq(1,:); %İlk değer seçilir
 VoFL=freq(end); %Son değer seçilir.
@@ -26,43 +26,9 @@ VoNL=noteDuration(end); %Son değer seçilir
 %koşuluyla atandı.
 %
 %
-Fs = 44100; %44100 Hz seçilir
-T=1/Fs; 
-% tt = 0:T:(noteDuration);
-
-%Son olarak gerekli döngü hazırlanır.
-% for kk=0:freq(end)
-%     disp(kk);
-% end
-for i=VoNF:VoNL
-    tt = 0:T:i;
-    for j=VoFF:VoFL
-        y=cos(2*pi*j*tt);
-        sound(y, Fs)
-    end
-% disp(i)
-end
-
-% FoF=freq(1,:);
-% FoS=freq(2,:);
-% FoT=freq(3,:);
-% FoF2=freq(4,:);
-
-% y = cos(2*pi*FoF*tt);
-
-
-% for i=0:LoP
-%     for y=0:LoP
-%         
-%     end
-% end
-% 
-% y = zeros(LoP);
-% parse2=parseMusicXML('deneme.musicxml');
-% for c = 1:LoP
-%     for r = 1:LoP
-%         y(r,c) = cos(2*pi*freq*tt);
-%     end
-%     sound(y(r,c), Fs);
-% end
-
+Fs=44100;
+Ts=1/Fs;
+t=0:Ts:.5;
+x = cos(2*pi*freq*t); 
+sig = reshape(x',length(freq)*length(t),1);
+sound(sig,Fs)

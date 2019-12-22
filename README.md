@@ -16,14 +16,17 @@ Başlangıç olarak bu sütunlar işimize yarayacak olan sütunlardır.<br/>
 
 > note.m dosyası
 
-```parse=parseMusicXML('muzik/nota.musicxml');```
+```
+parse=parseMusicXML('muzik/nota.musicxml');
+```
 
 
 
 > sentez.m dosyası
 
 
-```note;
+```
+note;
 
 LoP = length(parse);
 

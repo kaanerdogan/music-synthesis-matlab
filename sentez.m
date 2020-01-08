@@ -1,14 +1,14 @@
 note; %note.m çağrılır. parse değişkeni burada
 
-LoP = length(parse); %parse'ın uzunluğu alınır
-midiChannel=parse(:,3); % İlgili sütun değişkene atanır
-midiPitch=parse(:,4); % İlgili sütun değişkene atanır
-midiVelocity=parse(:,5); % İlgili sütun değişkene atanır
-noteOnset = parse(:,6); % İlgili sütun değişkene atanır
-noteDuration = parse(:,7); % İlgili sütun değişkene atanır
-timeSigniture=parse(:,10); % İlgili sütun değişkene atanır
+LoP = length(mxml); %mxml'in uzunluğu alınır
+midiChannel = mxml(:,3); % İlgili sütun, değişkene atanır
+midiPitch = mxml(:,4); % İlgili sütun, değişkene atanır
+midiVelocity = mxml(:,5); % İlgili sütun, değişkene atanır
+noteOnset = mxml(:,6); % İlgili sütun, değişkene atanır
+noteDuration = mxml(:,7); % İlgili sütun, değişkene atanır
+timeSigniture = mxml(:,10); % İlgili sütun, değişkene atanır
 
-freq=(440/32)*2.^((midiPitch-9)/12); % midi Pitch den frekans çevirme hesaplaması şarkının bütün notaların frekansları bu değişkene atanır
+freq=(440/32)*2.^((midiPitch-9)/12); % midi Pitch den frekans çevirme hesaplaması. Şarkının bütün notaların frekansları bu değişkene atanır
 
 
 VoFF=freq(1,:); %İlk değer seçilir

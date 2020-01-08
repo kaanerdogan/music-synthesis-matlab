@@ -1,1 +1,1 @@
-parse=parseMusicXML('muzik/nota.musicxml');
+mxml=parseMusicXML('muzik/nota.musicxml');

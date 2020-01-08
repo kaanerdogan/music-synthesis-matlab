@@ -1,6 +1,6 @@
 <strong>Ad Soyad:</strong> İsa Kaan Erdoğan <br/> <strong>Öğrenci Numarası:</strong> 030114028 <br/> <strong>Ders Adı:</strong> BIM - 311 Sinyal İşleme <br/> <strong>Proje:</strong> MATLAB ile Sentezleme<br/>
 <div align="center">
-![alt text](./muzik/nota.png "DDA")
+![alt text](muzik/nota.png "DDA")
 </div> <br/>
 <h2>Sentezleme İçin Gerekli Sütunlar</h2>
 Müziği sentezleyebilmek için verinin ~~1.~~ 2. 4. 6. ve 7. sütunlara ihtiyaç olduğunu düşünüyorum.
